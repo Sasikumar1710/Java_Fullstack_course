@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam System</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #ff9900;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 5px solid black;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.sidebar {
+    background-color:black;
+    width: 200px;
+    padding: 0;
+   
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    border: 1px solid red;
+    background-color: #006600;
+    border-radius:5px;
+    margin:2px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background-color: #006600;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #ffcccb;
+    padding: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Online Exam System</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </div>
+        <div class="content">
+           
+        </div>
+    </div>
+</body>
+</html>

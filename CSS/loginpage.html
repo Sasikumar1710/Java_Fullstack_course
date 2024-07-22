@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+   
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: url('./IMG/pexels-thatguycraig000-1563356.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: rgba(87, 85, 84, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+.input-container {
+    margin: 10px 0;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.checkbox-container a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+button {
+    background-color: #4caf50;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+img{
+    width:100%;
+    height: 100vh;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="login-container">
+        <div class="avatar">
+            <img src="./IMG/user (1).png" alt="Avatar">
+        </div>
+        <h2>LOGIN WINDOW</h2>
+        <form action="#">
+            <div class="input-container">
+                <label for="email">Your Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Your Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Agree With <a href="#">Terms & Condition</a></label>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
