@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events</title>
+    <style>
+        .result { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Events</h1>
+    
+   
+    <label for="textInput">Enter text:</label>
+    <input type="text" id="textInput" placeholder="Type something">
+    
+    <button id="clickButton">Click Me</button>
+    <button id="dblClickButton">Double Click Me</button>
+    
+    <p id="eventResult" class="result"></p>
+    
+    <script>
+        
+        function updateResult(message) {
+            document.getElementById("eventResult").textContent = message;
+        }
+
+        document.getElementById("textInput").addEventListener("input", function() {
+            updateResult(`Input Event Triggered: ${this.value}`);
+        });
+        document.getElementById("textInput").addEventListener("change", function() {
+            updateResult(`Change Event Triggered: ${this.value}`);
+        });
+        document.getElementById("textInput").addEventListener("keydown", function(event) {
+            updateResult(`Keydown Event Triggered: ${event.key}`);
+        });
+        document.getElementById("clickButton").addEventListener("click", function() {
+            updateResult("Click Event Triggered");
+        });
+        document.getElementById("dblClickButton").addEventListener("dblclick", function() {
+            updateResult("Double Click Event Triggered");
+        });
+        document.getElementById("clickButton").addEventListener("mouseover", function() {
+            updateResult("Mouseover Event Triggered on Click Me button");
+        });
+    </script>
+</body>
+</html>
