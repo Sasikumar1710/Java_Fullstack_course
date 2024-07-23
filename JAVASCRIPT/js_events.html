@@ -1,47 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>JavaScript Events</title>
-    <style>
-        .result { margin-top: 10px; }
-    </style>
-</head>
-<body>
-    <h1>JavaScript Events</h1>
-    
-   
-    <label for="textInput">Enter text:</label>
-    <input type="text" id="textInput" placeholder="Type something">
-    
-    <button id="clickButton">Click Me</button>
-    <button id="dblClickButton">Double Click Me</button>
-    
-    <p id="eventResult" class="result"></p>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
     <script>
-        
-        function updateResult(message) {
-            document.getElementById("eventResult").textContent = message;
+        function handleClick() {
+            document.write("Button clicked!<br>");
         }
 
-        document.getElementById("textInput").addEventListener("input", function() {
-            updateResult(`Input Event Triggered: ${this.value}`);
-        });
-        document.getElementById("textInput").addEventListener("change", function() {
-            updateResult(`Change Event Triggered: ${this.value}`);
-        });
-        document.getElementById("textInput").addEventListener("keydown", function(event) {
-            updateResult(`Keydown Event Triggered: ${event.key}`);
-        });
-        document.getElementById("clickButton").addEventListener("click", function() {
-            updateResult("Click Event Triggered");
-        });
-        document.getElementById("dblClickButton").addEventListener("dblclick", function() {
-            updateResult("Double Click Event Triggered");
-        });
-        document.getElementById("clickButton").addEventListener("mouseover", function() {
-            updateResult("Mouseover Event Triggered on Click Me button");
-        });
+
+        function handleMouseOver() {
+            document.write("Mouse over the text!<br>");
+        }
+
+        function handleChange() {
+            var value = document.getElementById("inputField").value;
+            document.write("Input changed to: " + value + "<br>");
+        }
+        function handleKeyDown(event) {
+            document.write("Key pressed: " + event.key + "<br>");
+        }
     </script>
+</head>
+<body>
+    <button onclick="handleClick()">Click Me</button>
+    <p onmouseover="handleMouseOver()">Hover over this text</p>
+    <input type="text" id="inputField" onchange="handleChange()">
+    <input type="text" onkeydown="handleKeyDown(event)">
+    <button></button>
+
 </body>
 </html>
