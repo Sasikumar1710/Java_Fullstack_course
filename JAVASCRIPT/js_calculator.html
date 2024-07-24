@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Calculator</title>
-  <style>
-    * {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +19,7 @@
     align-items: center;
 }
 #content {
-    background: #2c302c;
+    background: #16c3cf;
     padding: 20px;
     border-radius: 10px;
 
@@ -33,24 +36,35 @@
 }
 #backspace {
     background-color: rgb(237, 89, 30);
-    color: white;
+    color: rgb(8, 8, 8);
 }
 #res {
     padding: 10px;
 }
 #clear {
     background-color: rgb(237, 89, 30);
-    color: white;
+    color: black;
 }
 form #output {
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     margin: 15px 0;
 }
 form #output input {
     text-align: right;
     flex: 1;
     font-size: 25px;
+}
+input,button{
+    background-color: black;
+    color: white;
+}
+#res{
+    background-color: white;
+    color: black;
+}
+#res:hover{
+    color: aqua;
 }
   </style>
 </head>
@@ -90,6 +104,41 @@ form #output input {
          </form>
       </div>
    </div>
-   
+   <script>
+function Solve(val) {
+   var v = document.getElementById('res');
+   v.value += val;
+}
+function Result() {
+   var num1 = document.getElementById('res').value;
+   try {
+      var num2 = eval(num1.replace('x', '*'));
+      document.getElementById('res').value = num2;
+   } catch {
+      document.getElementById('res').value = 'Error';
+   }
+}
+function Clear() {
+   var inp = document.getElementById('res');
+   inp.value = '';
+}
+function Back() {
+   var ev = document.getElementById('res');
+   ev.value = ev.value.slice(0, -1);
+}
+document.addEventListener('keydown', function (event) {
+   const key = event.key;
+   const validKeys = '0123456789+-*/.%';
+   if (validKeys.includes(key)) {
+      Solve(key === '*' ? 'x' : key);
+   } else if (key === 'Enter') {
+      Result();
+   } else if (key === 'Backspace') {
+      Back();
+   } else if (key.toLowerCase() === 'c') {
+      Clear();
+   }
+});
+   </script>
 </body>
 </html>
