@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "management_system": {
+    "HostelManagement": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/management_system",
+            "outputPath": "dist/hostel-management",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "management_system:build:production"
+              "buildTarget": "HostelManagement:build:production"
             },
             "development": {
-              "buildTarget": "management_system:build:development"
+              "buildTarget": "HostelManagement:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "a30d2a14-1866-43c3-8d87-95c52dacea1e"
+    "analytics": "acb3845a-b21f-40ee-bdd5-b102e2dc9f02"
   }
 }
