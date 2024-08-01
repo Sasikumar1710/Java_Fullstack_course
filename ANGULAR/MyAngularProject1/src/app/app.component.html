@@ -31,7 +31,7 @@ Enter your First Name <input type="text"[(ngModel)]="fname">
 <br>
 <b>Welcome {{fname}}</b> -->
 
-<h1 [ngClass]="myClass">Structural and Attribute Directives Example</h1>
+<!-- <h1 [ngClass]="myClass">Structural and Attribute Directives Example</h1>
 <br>
 <button (click)="changeFlag()">Show or Hide Div</button>
 <br>  
@@ -52,4 +52,26 @@ Enter your First Name <input type="text"[(ngModel)]="fname">
   </div>
   <br>
   <button (click)="changeStyle()">change style</button>
-</div>A
+</div> -->
+
+
+<table width="80%" align="center">
+    <tr>
+      <th><a routerLink="home">Home</a></th>
+      <th><a routerLink="contact">Contact</a></th>
+      <th><a routerLink="about">about</a></th>
+    </tr>
+  </table>
+  <div>
+    This is the space for New Component.
+    <router-outlet></router-outlet>
+  </div>
+<br>
+
+<h1>Addition:{{sum}}</h1>
+<h1>Subtraction:{{sub}}</h1>
+<h1>Multiple:{{mul}}</h1>
+<h1>division:{{div}}</h1>
+
+
+  
