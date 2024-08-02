@@ -21,6 +21,8 @@ h1 {
     background-color: #dc3545;
     padding: 30px;
     align-items: center;
+    margin: 0%;
+    width: 100%;
     
 }
 
@@ -75,7 +77,12 @@ h1 {
 .buttons .delete {
     background-color: #dc3545;
 }
-
+.buttons .Find {
+    background-color: #6735dc;
+}
+.buttons .FindAll {
+    background-color: #35dcd9;
+}
 .student-list {
     width: 35%;
     padding: 20px;
